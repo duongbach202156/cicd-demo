@@ -1,0 +1,7 @@
+git:latest
+workflow-aggregator:latest
+github-branch-source:latest
+sonar:latest
+credentials-binding:latest
+junit:latest
+blueocean:latest
