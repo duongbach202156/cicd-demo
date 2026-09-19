@@ -21,6 +21,7 @@
         <java.version>17</java.version>
         <jib-maven-plugin.version>3.4.3</jib-maven-plugin.version>
         <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
+        <sonar-maven-plugin.version>5.1.0.4751</sonar-maven-plugin.version>
         <!-- Overridable from CLI: -Djib.to.image=<user>/<repo>:<tag> -->
         <jib.to.image>example/demo:latest</jib.to.image>
     </properties>
@@ -67,6 +68,12 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>${sonar-maven-plugin.version}</version>
             </plugin>
 
             <plugin>
