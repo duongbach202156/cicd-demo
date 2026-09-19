@@ -8,7 +8,7 @@ pipeline {
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-cred')
         // Đổi <dockerhub-user>/<repo> thành tài khoản Docker Hub thật của bạn.
-        IMAGE_NAME = "<dockerhub-user>/demo"
+        IMAGE_NAME = "bachdx202156/cicd-demo"
     }
 
     options {
@@ -47,7 +47,7 @@ pipeline {
                 withSonarQubeEnv('sonarqube') {
                     sh '''
                         mvn -B sonar:sonar \
-                          -Dsonar.projectKey=demo \
+                          -Dsonar.projectKey=cicd-demo \
                           -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
                     '''
                 }
