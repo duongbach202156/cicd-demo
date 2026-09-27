@@ -10,4 +10,9 @@ public class GreetingService {
         return "Hello, " + safeName + "!";
     }
 
+    public String goodbye(String name) {
+        String safeName = (name == null || name.isBlank()) ? "world" : name.trim();
+        return "Goodbye, " + safeName + "!";
+    }
+
 }
