@@ -19,4 +19,9 @@ public class HelloController {
         return greetingService.greet(name);
     }
 
+    @GetMapping("/api/goodbye")
+    public String goodbye(@RequestParam(name = "name", required = false) String name) {
+        return greetingService.greet(name);
+    }
+
 }
